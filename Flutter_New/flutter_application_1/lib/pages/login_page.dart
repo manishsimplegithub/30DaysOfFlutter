@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/utils/routes.dart';
 
 // ignore: use_key_in_widget_constructors
 class LoginPage extends StatelessWidget {
@@ -51,7 +52,7 @@ class LoginPage extends StatelessWidget {
                   child: Text("Login"),
                   style: TextButton.styleFrom(),
                   onPressed: () {
-                    print("Hi Codepur");
+                    Navigator.pushNamed(context, MyRoutes.homeRoute);
                   },
                 )
               ],
