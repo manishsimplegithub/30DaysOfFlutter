@@ -41,7 +41,7 @@ class LoginPage extends StatelessWidget {
                   obscureText: true,
                   decoration: InputDecoration(
                     hintText: "Enter password",
-                    labelText: "password",
+                    labelText: "Password",
                   ),
                 ),
                 SizedBox(
