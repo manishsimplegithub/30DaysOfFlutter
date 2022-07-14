@@ -18,7 +18,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF2F80ED),
+      backgroundColor: Color(0xFFFFFFFF),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -29,13 +29,13 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Container(
                   decoration: const BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.all(Radius.circular(42.0)),
+                    color: Colors.blue,
+                    borderRadius: BorderRadius.all(Radius.circular(60.0)),
                   ),
                   child: ClipRRect(
-                      borderRadius: BorderRadius.circular(20.0),
+                      borderRadius: BorderRadius.circular(27.0),
                       child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: const EdgeInsets.all(18.0),
                         child: Image.asset(
                           "assets/images/Group 30.png",
                           height: 62,
@@ -53,9 +53,9 @@ class _LoginPageState extends State<LoginPage> {
               //     ),
               //   ),
               // ),
-              SizedBox(
-                height: 20.0,
-              ),
+              // SizedBox(
+              //   height: 20.0,
+              // ),
               // Text(
               //   "Welcome",
               //   style: TextStyle(
@@ -64,61 +64,71 @@ class _LoginPageState extends State<LoginPage> {
               //   ),
               // ),
               SizedBox(
-                height: 20.0,
+                height: 10.0,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  vertical: 16.0,
-                  horizontal: 32.0,
+                  vertical: 70.0,
+                  horizontal: 15.0,
                 ),
                 child: Column(
                   children: [
-                    // TextField(
-                    //   decoration: InputDecoration(
-                    //     hintText: "Enter Username",
-                    //     labelText: "Username",
-                    //   ),
-                    // ),
-                    // TextField(
-                    //   obscureText: true,
-                    //   decoration: InputDecoration(
-                    //     hintText: "Enter password",
-                    //     labelText: "Password",
-                    //   ),
-                    // ),
-                    SizedBox(
-                      height: 20.0,
+                    Padding(
+                      padding: const EdgeInsets.all(9.0),
+                      child: const TextField(
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          hintText: "Enter Username",
+                          labelText: "Username",
+                        ),
+                      ),
                     ),
-                    Container(
-                      child: Container(
-                        child: ElevatedButton(
-                          child: Text("Login",
-                              style: TextStyle(
-                                  fontSize: 17,
-                                  fontWeight: FontWeight.w600,
-                                  color: Colors.black)),
-                          style: TextButton.styleFrom(
-                              backgroundColor: Color(0xFFFFFFFF),
-                              minimumSize: Size(
-                                500,
-                                40,
-                              )),
-                          onPressed: () {
-                            // Navigator.pushNamed(context, MyRoutes.homeRoute);
-                          },
+
+                    Padding(
+                      padding: const EdgeInsets.all(9.0),
+                      child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          hintText: "Enter password",
+                          labelText: "Password",
                         ),
                       ),
                     ),
                     SizedBox(
                       height: 20.0,
                     ),
+                    // Container(
+                    //   child: Container(
+                    //     child: ElevatedButton(
+                    //       child: Text("Login",
+                    //           style: TextStyle(
+                    //               fontSize: 17,
+                    //               fontWeight: FontWeight.w600,
+                    //               color: Colors.black)),
+                    //       style: TextButton.styleFrom(
+                    //           backgroundColor: Color(0xFFFFFFFF),
+                    //           minimumSize: Size(
+                    //             500,
+                    //             40,
+                    //           )),
+                    //       onPressed: () {
+                    //         // Navigator.pushNamed(context, MyRoutes.homeRoute);
+                    //       },
+                    //     ),
+                    //   ),
+                    // ),
+                    // SizedBox(
+                    //   height: 20.0,
+                    // ),
+
                     ElevatedButton(
                       child: Text(
-                        "Register",
+                        "Submit",
                       ),
                       style: TextButton.styleFrom(
-                          backgroundColor: Color(0xFF243847),
-                          minimumSize: Size(500, 40)),
+                          backgroundColor: Color(0xFF2F80ED),
+                          minimumSize: Size(315, 40)),
                       onPressed: () {
                         // Navigator.pushNamed(context, MyRoutes.homeRoute);
                       },
@@ -131,14 +141,17 @@ class _LoginPageState extends State<LoginPage> {
                       text: TextSpan(
                         children: const <TextSpan>[
                           TextSpan(
-                              text: 'Register for',
+                              text: 'Register to get',
                               style: TextStyle(
-                                  fontWeight: FontWeight.w700, fontSize: 14)),
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 14,
+                                  color: Colors.black38)),
                           TextSpan(
                               text: ' SCHOLARSHIP',
                               style: TextStyle(
                                   fontWeight: FontWeight.w700,
                                   fontSize: 14,
+                                  color: Colors.black45,
                                   decoration: TextDecoration.underline,
                                   decorationThickness: 2,
                                   decorationStyle: TextDecorationStyle.solid)),
