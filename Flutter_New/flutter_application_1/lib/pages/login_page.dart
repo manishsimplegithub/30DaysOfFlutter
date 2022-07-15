@@ -30,12 +30,12 @@ class _LoginPageState extends State<LoginPage> {
               Container(
                   decoration: const BoxDecoration(
                     color: Colors.blue,
-                    borderRadius: BorderRadius.all(Radius.circular(60.0)),
+                    borderRadius: BorderRadius.all(Radius.circular(120.0)),
                   ),
                   child: ClipRRect(
-                      borderRadius: BorderRadius.circular(27.0),
+                      borderRadius: BorderRadius.circular(40.0),
                       child: Padding(
-                        padding: const EdgeInsets.all(18.0),
+                        padding: const EdgeInsets.all(55.0),
                         child: Image.asset(
                           "assets/images/Group 30.png",
                           height: 62,
@@ -73,25 +73,29 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 child: Column(
                   children: [
+                    // Padding(
+                    //   padding: const EdgeInsets.all(9.0),
+                    //   child: const TextField(
+                    //     decoration: InputDecoration(
+                    //       border: OutlineInputBorder(),
+                    //       hintText: "Enter Username",
+                    //       labelText: "Username",
+                    //     ),
+                    //   ),
+                    // ),
                     Padding(
-                      padding: const EdgeInsets.all(9.0),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: "Enter Username",
-                          labelText: "Username",
-                        ),
-                      ),
+                      padding: const EdgeInsets.all(25.0),
+                      child: Text("Send OTP to Verify your mobile Number"),
                     ),
 
                     Padding(
                       padding: const EdgeInsets.all(9.0),
                       child: TextField(
-                        obscureText: true,
+                        // obscureText: true,
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
-                          hintText: "Enter password",
-                          labelText: "Password",
+                          hintText: "",
+                          labelText: "Mobile Number",
                         ),
                       ),
                     ),
@@ -124,7 +128,7 @@ class _LoginPageState extends State<LoginPage> {
 
                     ElevatedButton(
                       child: Text(
-                        "Submit",
+                        "Send OTP",
                       ),
                       style: TextButton.styleFrom(
                           backgroundColor: Color(0xFF2F80ED),
@@ -153,6 +157,32 @@ class _LoginPageState extends State<LoginPage> {
                                   fontSize: 14,
                                   color: Colors.black45,
                                   decoration: TextDecoration.underline,
+                                  decorationThickness: 2,
+                                  decorationStyle: TextDecorationStyle.solid)),
+                        ],
+                      ),
+                    )),
+
+                    SizedBox(
+                      height: 11.0,
+                    ),
+                    Container(
+                        child: RichText(
+                      text: TextSpan(
+                        children: const <TextSpan>[
+                          TextSpan(
+                              text: 'powered by',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 14,
+                                  color: Colors.black38)),
+                          TextSpan(
+                              text: ' EasyEdulab',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 14,
+                                  color: Colors.black12,
+                                  // decoration: TextDecoration.underline,
                                   decorationThickness: 2,
                                   decorationStyle: TextDecorationStyle.solid)),
                         ],
