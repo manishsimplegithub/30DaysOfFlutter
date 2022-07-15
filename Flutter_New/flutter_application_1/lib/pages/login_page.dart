@@ -22,20 +22,20 @@ class _LoginPageState extends State<LoginPage> {
       body: Center(
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
                 height: 80.0,
               ),
               Container(
                   decoration: const BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.black12,
                     borderRadius: BorderRadius.all(Radius.circular(60.0)),
                   ),
                   child: ClipRRect(
-                      borderRadius: BorderRadius.circular(27.0),
+                      borderRadius: BorderRadius.circular(30.0),
                       child: Padding(
-                        padding: const EdgeInsets.all(18.0),
+                        padding: const EdgeInsets.all(30.0),
                         child: Image.asset(
                           "assets/images/Group 30.png",
                           height: 62,
@@ -69,7 +69,7 @@ class _LoginPageState extends State<LoginPage> {
               Padding(
                 padding: const EdgeInsets.symmetric(
                   vertical: 70.0,
-                  horizontal: 15.0,
+                  horizontal: 14.0,
                 ),
                 child: Column(
                   children: [
@@ -158,6 +158,35 @@ class _LoginPageState extends State<LoginPage> {
                         ],
                       ),
                     )),
+                    SizedBox(
+                      height: 150.0,
+                    ),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                          child: RichText(
+                        text: TextSpan(
+                          children: const <TextSpan>[
+                            TextSpan(
+                                text: 'Powered by',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 14,
+                                    color: Colors.black38)),
+                            TextSpan(
+                                text: ' EasyEdulab',
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 14,
+                                    color: Colors.black12,
+                                    // decoration: TextDecoration.underline,
+                                    decorationThickness: 2,
+                                    decorationStyle:
+                                        TextDecorationStyle.solid)),
+                          ],
+                        ),
+                      )),
+                    ),
                   ],
                 ),
               )
