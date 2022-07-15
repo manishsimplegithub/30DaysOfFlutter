@@ -29,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Container(
                   decoration: const BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.black12,
                     borderRadius: BorderRadius.all(Radius.circular(120.0)),
                   ),
                   child: ClipRRect(
@@ -37,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                       child: Padding(
                         padding: const EdgeInsets.all(55.0),
                         child: Image.asset(
-                          "assets/images/Group 30.png",
+                          "assets/images/Icon.png",
                           height: 62,
                           width: 62,
                         ),
