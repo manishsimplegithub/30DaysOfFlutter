@@ -23,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
       // mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SizedBox(
-          height: 180.0,
+          height: 120.0,
         ),
         Container(
             decoration: const BoxDecoration(
@@ -49,6 +49,7 @@ class _LoginPageState extends State<LoginPage> {
             // decoration: BoxDecoration(
             //     // color: Colors.white,
             //     ),
+
             child: Align(
               alignment: Alignment.topLeft,
               child: Image.asset(
