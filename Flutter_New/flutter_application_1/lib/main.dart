@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/pages/MyProfile.dart';
 import 'package:flutter_application_1/pages/home_page.dart';
 import 'package:flutter_application_1/pages/login_page.dart';
 import 'package:flutter_application_1/utils/routes.dart';
@@ -20,7 +21,8 @@ class myApp extends StatelessWidget {
         // primarySwatch: Colors.green,
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
-      home: LoginPage(),
+      // home: LoginPage(),
+      home: MyProfile(),
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
         brightness: Brightness.light,
