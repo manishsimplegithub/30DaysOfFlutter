@@ -3,6 +3,7 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_1/utils/routes.dart';
@@ -29,13 +30,13 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Container(
                   decoration: const BoxDecoration(
-                    color: Colors.blue,
+                    color: Colors.black12,
                     borderRadius: BorderRadius.all(Radius.circular(120.0)),
                   ),
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(40.0),
                       child: Padding(
-                        padding: const EdgeInsets.all(55.0),
+                        padding: const EdgeInsets.all(40.0),
                         child: Image.asset(
                           "assets/images/Group 30.png",
                           height: 62,
@@ -85,24 +86,147 @@ class _LoginPageState extends State<LoginPage> {
                     // ),
                     Padding(
                       padding: const EdgeInsets.all(25.0),
-                      child: Text("Send OTP to Verify your mobile Number"),
-                    ),
-
-                    Padding(
-                      padding: const EdgeInsets.all(9.0),
-                      child: TextField(
-                        // obscureText: true,
-                        decoration: InputDecoration(
-                          border: OutlineInputBorder(),
-                          hintText: "",
-                          labelText: "Mobile Number",
-                        ),
-                      ),
+                      child: Text("you will Recive OTP on"),
                     ),
                     SizedBox(
-                      height: 20.0,
+                      height: 20,
                     ),
-                    // Container(
+                    Form(
+                        child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        SizedBox(
+                          width: 50,
+                          height: 90,
+                          child: TextFormField(
+                              textAlign: TextAlign.center,
+                              onChanged: (value) {
+                                if (value.length == 1) {
+                                  FocusScope.of(context).nextFocus();
+                                }
+                              },
+                              keyboardType: TextInputType.number,
+                              inputFormatters: [
+                                LengthLimitingTextInputFormatter(1),
+                              ],
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 30),
+                              decoration: InputDecoration(
+                                  filled: true, fillColor: Colors.black12)),
+                        ),
+                        SizedBox(
+                          width: 50,
+                          height: 90,
+                          child: TextFormField(
+                              textAlign: TextAlign.center,
+                              onChanged: (value) {
+                                if (value.length == 1) {
+                                  FocusScope.of(context).nextFocus();
+                                }
+                              },
+                              keyboardType: TextInputType.number,
+                              inputFormatters: [
+                                LengthLimitingTextInputFormatter(1),
+                              ],
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 30),
+                              decoration: InputDecoration(
+                                  filled: true, fillColor: Colors.black12)),
+                        ),
+                        SizedBox(
+                          width: 50,
+                          height: 90,
+                          child: TextFormField(
+                              textAlign: TextAlign.center,
+                              onChanged: (value) {
+                                if (value.length == 1) {
+                                  FocusScope.of(context).nextFocus();
+                                }
+                              },
+                              keyboardType: TextInputType.number,
+                              inputFormatters: [
+                                LengthLimitingTextInputFormatter(1),
+                              ],
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 30),
+                              decoration: InputDecoration(
+                                  filled: true, fillColor: Colors.black12)),
+                        ),
+                        SizedBox(
+                          width: 50,
+                          height: 90,
+                          child: TextFormField(
+                              textAlign: TextAlign.center,
+                              onChanged: (value) {
+                                if (value.length == 1) {
+                                  FocusScope.of(context).nextFocus();
+                                }
+                              },
+                              keyboardType: TextInputType.number,
+                              inputFormatters: [
+                                LengthLimitingTextInputFormatter(1),
+                              ],
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 30),
+                              decoration: InputDecoration(
+                                  filled: true, fillColor: Colors.black12)),
+                        ),
+                        SizedBox(
+                          width: 50,
+                          height: 90,
+                          child: TextFormField(
+                              textAlign: TextAlign.center,
+                              onChanged: (value) {
+                                if (value.length == 1) {
+                                  FocusScope.of(context).nextFocus();
+                                }
+                              },
+                              keyboardType: TextInputType.number,
+                              inputFormatters: [
+                                LengthLimitingTextInputFormatter(1),
+                              ],
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 30),
+                              decoration: InputDecoration(
+                                  filled: true, fillColor: Colors.black12)),
+                        ),
+                        SizedBox(
+                          width: 50,
+                          height: 90,
+                          child: TextFormField(
+                              textAlign: TextAlign.center,
+                              onChanged: (value) {
+                                if (value.length == 1) {
+                                  FocusScope.of(context).nextFocus();
+                                }
+                              },
+                              keyboardType: TextInputType.number,
+                              inputFormatters: [
+                                LengthLimitingTextInputFormatter(1),
+                              ],
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 30),
+                              decoration: InputDecoration(
+                                  filled: true, fillColor: Colors.black12)),
+                        ),
+                      ],
+                    )),
+
+                    // Padding(
+                    //   padding: const EdgeInsets.all(9.0),
+                    //   child: TextField(
+                    //     // obscureText: true,
+                    //     decoration: InputDecoration(
+                    //       border: OutlineInputBorder(),
+                    //       hintText: "",
+                    //       labelText: "Mobile Number",
+                    //     ),
+                    //   ),
+                    // ),
+                    // SizedBox(
+                    //   height: 20.0,
+                    // ),
+                    // // Container(
                     //   child: Container(
                     //     child: ElevatedButton(
                     //       child: Text("Login",
@@ -128,43 +252,65 @@ class _LoginPageState extends State<LoginPage> {
 
                     ElevatedButton(
                       child: Text(
-                        "Send OTP",
+                        "Sumbmit",
                       ),
                       style: TextButton.styleFrom(
                           backgroundColor: Color(0xFF2F80ED),
-                          minimumSize: Size(315, 40)),
+                          minimumSize: Size(355, 46)),
                       onPressed: () {
                         // Navigator.pushNamed(context, MyRoutes.homeRoute);
                       },
                     ),
                     SizedBox(
-                      height: 11.0,
+                      height: .0,
                     ),
                     Container(
-                        child: RichText(
-                      text: TextSpan(
-                        children: const <TextSpan>[
-                          TextSpan(
-                              text: 'Register to get',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 14,
-                                  color: Colors.black38)),
-                          TextSpan(
-                              text: ' SCHOLARSHIP',
-                              style: TextStyle(
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 14,
-                                  color: Colors.black45,
-                                  decoration: TextDecoration.underline,
-                                  decorationThickness: 2,
-                                  decorationStyle: TextDecorationStyle.solid)),
-                        ],
-                      ),
-                    )),
+                        alignment: Alignment.center,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Text(
+                                '',
+                                style:
+                                    TextStyle(color: Colors.grey, fontSize: 20),
+                              ),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: Text(
+                                    'Resend OTP',
+                                    style: TextStyle(
+                                        color: Colors.blue, fontSize: 20),
+                                  ))
+                            ],
+                          ),
+                        )),
+
+                    // Container(
+                    //     child: RichText(
+                    //   text: TextSpan(
+                    //     children: const <TextSpan>[
+                    //       TextSpan(
+                    //           text: 'Register to get',
+                    //           style: TextStyle(
+                    //               fontWeight: FontWeight.w700,
+                    //               fontSize: 14,
+                    //               color: Colors.black38)),
+                    //       TextSpan(
+                    //           text: ' SCHOLARSHIP',
+                    //           style: TextStyle(
+                    //               fontWeight: FontWeight.w700,
+                    //               fontSize: 14,
+                    //               color: Colors.black45,
+                    //               decoration: TextDecoration.underline,
+                    //               decorationThickness: 2,
+                    //               decorationStyle: TextDecorationStyle.solid)),
+                    //     ],
+                    //   ),
+                    // )),
 
                     SizedBox(
-                      height: 11.0,
+                      height: 70.0,
                     ),
                     Container(
                         child: RichText(
