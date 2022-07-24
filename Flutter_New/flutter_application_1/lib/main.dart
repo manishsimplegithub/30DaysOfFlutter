@@ -22,7 +22,9 @@ class myApp extends StatelessWidget {
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
       // home: LoginPage(),
+      // home: MyProfile(),
       home: MyProfile(),
+
       debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
         brightness: Brightness.light,

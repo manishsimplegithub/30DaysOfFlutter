@@ -19,6 +19,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       backgroundColor: Color(0xFFFFFFFF),
       body: Center(
         child: SingleChildScrollView(
@@ -43,6 +44,7 @@ class _LoginPageState extends State<LoginPage> {
                           width: 62,
                         ),
                       ))),
+
               // ClipRRect(
               //   borderRadius: BorderRadius.circular(48.0),
               //   child: Padding(
